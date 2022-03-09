@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--nếu phút gọi bé hơn 5 thì nhân cho 500 ra số tiền cước
+    nếu phút gọi bằng 5 thì nhân cho 560 ra số tiền cước
+    nếu phút gọi lớn hơn 5 thì nhân cho 700 ra số tiền cước-->
+<script>
+    let a = parseInt(prompt("nhập số phút gọi của bạn"))
+    let b = 0
+    if (a < 5) {
+        b = a * 500
+        alert("Số tiền cước của bạn là" + b)
+    } else if (a === 5) {
+        b = a * 560
+        alert('Số tiền cước của bạn là' + b)
+    } else if (a > 5) {
+        b= a*700
+        alert('số tiền cước của bạn là' + b)
+    } else{
+        alert('Nhập sai hãy nhập lại')
+    }
+
+</script>
+
+</body>
+</html>
