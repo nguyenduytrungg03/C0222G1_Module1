@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let weight = prompt('Vui lòng nhập cân nặng của bạn:');
+    let height = prompt('Vui lòng nhập chiều cao của bạn:');
+     bmi= weight/(height^2);
+    if (bmi<18)
+        alert('Underweight(Thiếu cân)');
+    else if ( bmi< 25.0)
+        alert('Nomar(ổn định)');
+    else if (bmi<30.0)
+        alert('Overweight(Thừa cân)');
+    else
+        alert('Obese(Béo phì)');
+</script>
 </body>
 </html>
