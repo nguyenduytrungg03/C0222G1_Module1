@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4 align="center">In bảng cứu chương</h4>
+<script>
+    let i,j
+    document.write('<table border=\'1\' width=\'500\' cellpadding=\'10\' style="color: yellow;background-color: darkgray" align="center" > ');
+    for (i=2;i<=9;i++){
+        document.write("<tr>" )
+        for(j=1;j<10;j++){
+            document.write("<td>")
+            document.write(i+'*'+j+'='+i*j)
+            document.write("</td>")
+        }
+        document.write("</tr>" )
+
+    }
+    document.write('</table>')
+</script>
+
+</body>
+</html>
