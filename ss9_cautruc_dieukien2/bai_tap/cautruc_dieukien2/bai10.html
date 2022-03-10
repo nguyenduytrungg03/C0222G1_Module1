@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kwh = parseFloat(prompt('nhap kwh'));
+    let gia = 0;
+
+    if (kwh > 0 && kwh <= 50) {
+        alert(gia = kwh * 1.678 + ' ' + 'vnd là giá điện')
+    } else if (kwh <= 100) {
+        alert(gia = kwh * 1.734 + ' ' + 'vnd là giá điện')
+
+    } else if (kwh <= 200) {
+        alert(gia = kwh * 2.014 + ' ' + 'vnd là giá điện')
+
+    } else if (kwh <= 300) {
+        alert(gia = kwh * 2.536 + ' ' + 'vnd là giá điện')
+    }else {
+        alert('hãy nhập lại')
+    }
+
+</script>
+</body>
+</html>

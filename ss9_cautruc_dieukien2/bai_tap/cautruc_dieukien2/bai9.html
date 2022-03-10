@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('nhap so a'))
+    let b = parseInt(prompt('nhap so b'))
+    let c = parseInt(prompt('nhap so c'))
+
+    if (a > 0 && b > 0 && c > 0) {
+        if ((a + b) > c || (b + c) > a || (a + c) > b) {
+            alert('số bạn vừa nhập là cạnh của tam giác')
+        }
+    } else {
+        alert('số bạn vừa nhập không phải là cạnh của tam giác')
+    }
+</script>
+</body>
+</html>
