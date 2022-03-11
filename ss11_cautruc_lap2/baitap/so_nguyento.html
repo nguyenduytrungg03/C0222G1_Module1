@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 20
+    let b = 2
+    let biendem = 0;
+    while (biendem < a) {
+        let check = 0;
+        for ( let i = 0; b < i; i++) {
+            if (b % i === 0) {
+                check++
+            }
+        }
+        if (check === 0) {
+            document.write(b + 'đây là số nguyên tố <br> ');
+            biendem++
+        }
+        b++
+    }
+</script>
+</body>
+</html>
