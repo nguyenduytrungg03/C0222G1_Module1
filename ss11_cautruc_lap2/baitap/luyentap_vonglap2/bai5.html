@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+    let a = parseInt(prompt('nhập số tiền cho vay'));
+    let b = parseInt(prompt('nhập số tiền tháng cho vay'));
+    let c = 6/100;
+
+    let d = a * Math.pow((1+c), b) - a;
+    alert('số tiền lãi sau '+ b + ' ' + 'tháng là: ' + d +'vnd');
+
+</script>
+</body>
+
+</html>
