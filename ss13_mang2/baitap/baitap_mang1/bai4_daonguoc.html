@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt('Nhap so luong phan tu trong mang:'))
+    let b;
+    let newarray = [];
+    for (let i=0;i<a;){
+        b=parseInt(prompt('Nhap gia tri  a['+i+']'))
+        if (isNaN(b)){
+            alert('Nhap lai')
+        }else {
+            newarray[i] = b;
+            i++
+        }
+    }
+    document.write(newarray.reverse())
+
+</script>
+
+</body>
+</html>

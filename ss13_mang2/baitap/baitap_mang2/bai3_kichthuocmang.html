@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Viết một chương trình khai báo một mảng ký tự và kích thước của mảng.-->
+<!--Chương trình này đếm số ký tự số trong mảng.-->
+<script>
+    let array1=[1,2,3,4,5,6,7,8,9,'a75','b10','a88']
+    let string1 = array1.join(""); // 123456789a75b10
+    let array2 = string1.split(""); // 1,2,3,4,5,6,7,8,9,a,7,5... splice(2,2)
+    let count=0;
+    for (let i = 0;i<array2.length;i++){
+        if(isNaN(array2[i])===false){
+            count++;
+        }
+    }
+    alert(count);
+
+</script>
 </body>
 </html>

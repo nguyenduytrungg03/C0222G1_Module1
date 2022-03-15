@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // khai báo mảng a gồm một dãy số, tạo thêm max để biết giá trị lớn nhất
+    // mặt định là phần tử đầu tiên trong mảng
+    // khai báo index để xdinh vị trí của số lớn nhất
+    var a = [1, 2, 3, 4, 56, 6, 7, 9, 11, 12];
+    var max = a[0];
+    var index = 0
+    for (let i = 1; i < a.length; i++) {
+        if (a[i] > max) {
+            max = a[i]
+            index = i
+        }
+    }
+    alert('giá trị lớn nhất:' + max + 'nằm ở vị trí thứ' + index)
+</script>
+</body>
+</html>

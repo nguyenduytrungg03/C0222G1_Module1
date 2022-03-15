@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<input style="background: antiquewhite" placeholder="Search" id="value" type="text">
+<button style="color: red" onclick="dich()">Translate</button>
+
+<script>
+    let english = ['pig', 'rice', 'baby', 'break heart', 'go to the bed']
+    let vietnam = ['heo', 'cơm', 'em bé', 'vỡ tim', 'đi ngủ khò khò']
+
+    function dich() {
+        let search = document.getElementById('value').value
+        let newsearch = search.toLowerCase();
+        if (english.indexOf(newsearch) !== -1) {
+            alert(vietnam[english.indexOf(newsearch)])
+        } else {
+            alert("không có trong từ điển")
+        }
+    }
+</script>
 </body>
 </html>

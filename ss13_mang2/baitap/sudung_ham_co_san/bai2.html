@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<!--Viết một chương trình nhận một số nhập vào và-->
+<!--chèn dấu (-)giữa 2  số chẵn. Ví dụ nếu bạn nhập vào-->
+<!--025468 thì kết quả của chương trình sẽ là 0-254-6-8-->
+<script>
+ var a = parseInt(prompt('nhap day so ban muon:'))
+ var b = a.toString();
+ var c = [b[0]];
+ for(var x=1;x<b.length;x++){
+if ((b[x-1]%2)===0 && (b[x]%2===0)){
+    c.push('-',b[x]);
+}else {
+    c.push(b[x]);
+}
+ }
+ console.log(c.join(''))
+</script>
 </body>
 </html>
