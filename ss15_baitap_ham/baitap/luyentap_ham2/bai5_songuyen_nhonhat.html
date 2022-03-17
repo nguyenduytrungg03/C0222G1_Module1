@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // function kiemTra() {
+    //     let a=parseInt(prompt('nhập số t1'));
+    //     let b=parseInt(prompt('nhập số t2'));
+    //     let c=parseInt(prompt('nhập số t3'));
+    //     if (a<b ||a<c){
+    //         alert('số nhỏ nhất là số thứ:'+a)
+    //     }else if (b<a||b<c){
+    //         alert('số nhỏ nhất là số thứ:'+b)
+    //     }else {
+    //         alert('số nhỏ nhất là số thứ:'+c)
+    //     }
+    // }
+    // kiemTra()
+
+    function kiemTra() {
+        let a = []
+        for (let i = 1; i <= 3; i++)
+            a.push(parseInt(prompt('nhập giá trị thứ ' + i)))
+
+        let b = a.sort(function (a, b) {
+            return a - b
+        })
+        alert(b[0] + 'là số bé nhất')
+    }
+    kiemTra()
+</script>
+</body>
+</html>

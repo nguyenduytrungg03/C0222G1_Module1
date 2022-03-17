@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let input = prompt('1 đổi từ M sang F /n 2 đổi từ F sang M');
+    let value = prompt('nhập giá trị muốn đổi');
+    if (input === 1) {
+        alert(metersToFoot(value) + 'Foot')
+    } else {
+        alert(footToMeters(value) + 'Mester')
+    }
+
+    function footToMeters(foot) {
+        return  foot * 0.305
+    }
+
+    function metersToFoot(mester) {
+        return mester * 3.279
+    }
+
+</script>
 </body>
 </html>
