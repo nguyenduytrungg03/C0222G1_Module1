@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class iPhone {
+        constructor(ten, trangThai, hopThu, tinDaGui, pin) {
+            this.ten = ten;
+            this.trangThai = trangThai;
+            this.hopThu = hopThu;
+            this.tinDaGui = tinDaGui;
+            this.pin = pin;
+
+        }
+
+        returnStatus() {
+            return this.trangThai;
+
+        }
+
+        setStatus() {
+            if (this.trangThai) {
+                this.trangThai = false;
+                return "may da tat";
+            } else {
+                this.trangThai = true;
+                return "may da bat";
+            }
+        }
+
+        setPin() {
+            if (this.pin) {
+                this.pin = false;
+                return "may da ngat sac";
+            } else {
+                this.pin = true;
+                return "may can sac";
+            }
+        }
+
+        returnPin() {
+            return this.pin;
+        }
+
+        guiTinNhan(obNokia, tinNhan) {
+            if (this.trangThai) { //kiem tra iphone mo chua
+                if (this.pin > 0) { //kiem tra pin
+                    obNokia.hopThu.push(tinNhan); //gửi tin nhắn qua nokia
+                    this.tinDaGui.push(tinNhan); //lưu tnhan vào tin đã gửi
+                    this.suaPin(); // gọi hàm trừ pin xong tác vụ thì nó trừ 1%
+                    return this.ten + ' da gui cho ' + obNokia.ten; // nó return lại cho hàm guiTinNhan
+                } else {
+                    return " sạc pin đi";
+                }
+            } else {
+                return "không gửi dc,máy đã tắt rồi";
+            }
+
+
+        }
+
+        suaPin() {
+            this.pin--;
+        }
+
+        tinNhanDaGui() {
+            if (this.trangThai) {
+                if (this.pin > 0) {
+                    this.suaPin();
+                    return this.tinDaGui;
+                } else {
+                    return "sạc pin đi";
+                }
+            } else {
+                return "máy đang tắt"
+            }
+        }
+
+        hopThuDen() {
+            if (this.trangThai) {
+                if (this.pin > 0) {
+                    this.suaPin()
+                    return this.hopThu;
+                } else {
+                    return "sạc pin đi"
+                }
+            } else {
+                return "máy đang tắt";
+            }
+        }
+
+
+    }
+
+    class Nokia {
+        constructor(ten, trangThai, hopThu, tinDaGui, pin) {
+            this.ten = ten;
+            this.trangThai = trangThai;
+            this.hopThu = hopThu;
+            this.tinDaGui = tinDaGui;
+            this.pin = pin;
+
+        }
+
+        returnStatus() {
+            return this.trangThai;
+
+        }
+
+        setStatus() {
+            if (this.trangThai) {
+                this.trangThai = false;
+                return "may da tat";
+            } else {
+                this.trangThai = true;
+                return "may da bat";
+            }
+        }
+
+        setPin() {
+            if (this.pin) {
+                this.pin = false;
+                return "may da ngat sac";
+            } else {
+                this.pin = true;
+                return "may can sac";
+            }
+        }
+
+        returnPin() {
+            return this.pin;
+        }
+
+        guiTinNhan(obIphone, tinNhan) {
+            if (this.trangThai) { //kiem tra iphone mo chua
+                if (this.pin > 0) { //kiem tra pin
+                    obIphone.hopThu.push(tinNhan);
+                    this.tinDaGui.push(tinNhan);
+                    this.suaPin();
+                    return this.ten + ' da gui cho ' + obIphone.ten;
+                } else {
+                    return " sạc pin đi";
+                }
+            } else {
+                return "không gửi dc,máy đã tắt rồi";
+            }
+
+        }
+
+        suaPin() {
+            this.pin--;
+        }
+
+
+    }
+
+    let hopThuIP = [];
+    let hopthuNokia = [];
+    let tinGuiIP = [];
+    let tinGuiNokia = [];
+    let obIphone = new iPhone('iphone', false, hopThuIP, tinGuiIP, 100);
+    let obNokia = new Nokia('nokia', true, hopthuNokia, tinGuiNokia, 100);
+    console.log(obIphone.guiTinNhan(obNokia,'aaaaa'));
+
+
+</script>
+</body>
+</html>

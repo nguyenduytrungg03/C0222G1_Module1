@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(C) {
+            this.C = C;
+        }
+
+        FeatureCtoF() {
+            return (this.C * 1800) + 32.00;
+        }
+
+        FeatureCtoK() {
+            return this.C + 273.15;
+        }
+    }
+
+    let temperature = new Temperature(25);
+    alert('F = ' + temperature.FeatureCtoF() + ' độ');
+    alert('K = ' + temperature.FeatureCtoK() + ' độ');
+</script>
+</body>
+</html>

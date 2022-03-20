@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Retangle {
+        constructor(length,width) {
+            this.length = length;
+            this.width = width;
+        }
+        getArea(){
+            return this.length*this.width;
+        }
+        getPerimeter(){
+            return (this.length+this.width)*2;
+        }
+    }
+    let retangle = new Retangle(4,3);
+    alert('S hinh chu nhat: '+retangle.getArea());
+    alert('Chu vi hinh chu nhat: '+retangle.getPerimeter());
+</script>
+</body>
+</html>

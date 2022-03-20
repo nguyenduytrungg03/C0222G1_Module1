@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(radius) {
+            this.radius = radius;
+        }
+        getRadius() {
+            return this.radius;
+        }
+
+        getArea() {
+            return Math.PI * this.radius* this.radius;
+        }
+    }
+    //ten khai bao khac ten class!!!!!
+    let circle = new Circle(4);
+    alert('ban kinh hinh tron la:'+circle.getRadius())
+    alert('S hinh tron la:'+circle.getArea())
+</script>
+</body>
+</html>
