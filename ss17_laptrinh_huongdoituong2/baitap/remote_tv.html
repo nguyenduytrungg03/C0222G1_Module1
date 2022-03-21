@@ -2,9 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Tivi {
+        constructor(volume, channel, status) {
+            this.volume = volume;
+            this.channel = channel;
+            this.status = status;
+        }
+
+        setChannel(number) {
+            if (obtivi.status){
+            this.channel = number;
+            return this.channel;
+            }else {
+                return "tivi da tat";
+            }
+        }
+
+        setVolume(number) {
+            if (obtivi.status){
+                this.volume = number;
+                return this.volume;
+            }else {
+                return "tivi da tat";
+            }
+        }
+
+    }
+
+    class Remote {
+        constructor() {
+        }
+
+        turnOff(obtivi) {
+            obtivi.status = false;
+            return "tivi da tat";
+        }
+
+        turnOn(obtivi) {
+            obtivi.status = true;
+            return "bat tivi roi ";
+        }
+
+        changeChannel(obtivi, number) {
+            if (obtivi.status) {
+                obtivi.channel = number;
+                return "da chuyen den kenh " + obtivi.channel;
+            } else {
+                return 'tivi da tat'
+            }
+        }
+
+        changeVolume(obtivi, number) {
+            if (obtivi.status) {
+                obtivi.volume = number;
+                return "da tang am luong len " + obtivi.volume + " don vi";
+            } else {
+                return 'tivi da tat'
+            }
+        }
+
+    }
+
+    let obtivi = new Tivi("","", true); // cái này là true là bật tivi, false là tắt tivi
+    let obremote = new Remote();
+    console.log(obremote.turnOn(obtivi));
+    console.log(obtivi.setChannel("VTV3"));
+    console.log(obtivi.setVolume(70));
+    console.log(obtivi);
+    console.log(obremote.turnOff(obtivi));
+    console.log(obremote.changeChannel(obtivi,2));
+    console.log(obremote.changeVolume(obtivi,40));
+    console.log(obtivi);
+
+</script>
 </body>
 </html>

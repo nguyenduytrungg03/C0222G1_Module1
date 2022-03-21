@@ -2,9 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    class Apple {
+        constructor(kilo) {
+            this.kilo = kilo;
+        }
+    }
+
+    class adam {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        checkApple(obAp) {
+            return obAp.kilo;
+        }
+
+        eatApple(obAp) {
+
+            if (obAp.kilo > 0) {
+                obAp.kilo--;
+                this.weight++;
+                return this.weight;
+            } else {
+                return 'Táo hết rồi';
+            }
+        }
+
+        say(string) {
+            return this.name + ' said ' + string;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(string) {
+            this.name = string;
+            return this.name;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        setWeight(int) {
+            this.weight = int;
+            return this.weight;
+        }
+    }
+
+    let obAp = new Apple(10);
+    let obAdam = new adam('adam', 'male', 50)
+    console.log(obAdam.eatApple(obAp));
+    console.log(obAdam.say('hello hieu'));
+
+
+</script>
 </body>
 </html>
